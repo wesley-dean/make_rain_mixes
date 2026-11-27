@@ -66,6 +66,16 @@ Please read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file for details on
 the code of conduct.  Long story short, be nice to each other and treat each
 other with respect, compassion, and empathy, especially when you disagree.
 
+## Dependency maintenance
+
+Routine GitHub Actions dependency updates are centrally managed by the
+Jenkins Renovate runner, with explicit enrollment through `renovate.json`.
+The existing Dependabot configuration disables scheduled version PRs via
+`open-pull-requests-limit: 0` while keeping vulnerability alerts and
+Dependabot security updates separate. The existing non-major Dependabot
+auto-merge workflow remains restricted to Dependabot PRs; required CI and
+human review continue to govern Renovate.
+
 ## Authors
 
 - Wes Dean
